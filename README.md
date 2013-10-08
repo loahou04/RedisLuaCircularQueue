@@ -9,16 +9,16 @@ The script turns redis itself into a queue manager.  All consumers will call the
 Usage
 =====================
 
-redis-cli: eval "$(cat /path/to/getNextQItem.lua)" 4 KEYS1 KEYS2 KEYS3 KEYS4
+redis-cli: eval "$(cat /path/to/getNextQItem.lua)" 5 KEYS1 KEYS2 KEYS3 KEYS4 KEYS 5
 
---KEYS[1]
-	-- limit for searching for next processable queue item
---KEYS[2]
-	-- Queue to pop items off of
---KEYS[3]
-	--current UTC time in milliseconds
---KEYS[4]
-	--allowable processing time in milliseconds
---KEYS[5]
-	--item retry limit
+KEYS1
+	limit for searching for next processable queue item
+KEYS2
+	Queue to pop items off of
+KEYS3
+	current UTC time in milliseconds
+KEYS4
+	allowable processing time in milliseconds
+KEYS5
+	item retry limit
 
