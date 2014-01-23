@@ -9,7 +9,7 @@ The script turns redis itself into a queue manager.  All consumers will call the
 Usage
 =====================
 
-redis-cli: eval "$(cat /path/to/getNextQItem.lua)" 5 KEYS1 KEYS2 KEYS3 KEYS4 KEYS 5
+redis-cli: eval "$(cat /path/to/getNextQItem.lua)" 5 KEYS1 KEYS2 KEYS3 KEYS4 KEYS5
 ```
 KEYS1
 	limit for searching for next processable queue item
